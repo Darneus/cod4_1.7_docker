@@ -1,0 +1,26 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    container_name: cod4-server
+    volumes:
+      - ./main:/cod4/main
+      - ./zone:/cod4/zone:ro
+      - ./mods:/cod4/mods
+      - ./usermaps:/cod4/usermaps:ro
+      - ./config:/cod4/config:ro
+    network_mode: bridge
+    ports:
+      - 28960:28960/udp
+    restart: always
+
+#  cod4_http:
+#    image: httpd:alpine
+#    container_name: cod4-http
+#    volumes:
+#      - ./mods:/usr/local/apache2/htdocs/mods:ro
+#      - ./usermaps:/usr/local/apache2/htdocs/usermaps:ro
+#    ports:
+#      - 8000:80
+#    network_mode: bridge
+#    restart: always
