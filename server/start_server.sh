@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 printf " #########################################\n"
 printf " ######### COD4 Dedicated Server #########\n"
