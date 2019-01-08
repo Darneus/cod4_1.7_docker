@@ -13,13 +13,13 @@ services:
       - 28960:28960/udp
     restart: always
 
-#  cod4_http:
-#    image: httpd:alpine
-#    container_name: cod4-http
-#    volumes:
-#      - ./mods:/usr/local/apache2/htdocs/mods:ro
-#      - ./usermaps:/usr/local/apache2/htdocs/usermaps:ro
-#    ports:
-#      - 8000:80
-#    network_mode: bridge
-#    restart: always
+  cod4_http:
+    image: nginx
+    container_name: cod4-http
+    volumes:
+      - ./mods:/usr/share/nginx/html/mods:ro
+      - ./usermaps:/usr/share/nginx/html/usermaps:ro
+    ports:
+      - 8000:80
+    network_mode: bridge
+    restart: always
