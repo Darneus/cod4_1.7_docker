@@ -1,14 +1,13 @@
 version: '3'
 services:
   server:
-    build: ./server
-    container_name: cod4-server
+    image: darneus/cod4_v1.7_server
     volumes:
-      - ./main:/cod4/main
-      - ./zone:/cod4/zone:ro
-      - ./mods:/cod4/mods
-      - ./usermaps:/cod4/usermaps:ro
-      - ./config:/cod4/config:ro
+      - ./main:/srv/cod4/main
+      - ./zone:/srv/cod4/zone:ro
+      - ./mods:/srv/cod4/mods
+      - ./usermaps:/srv/cod4/usermaps:ro
+      - ./config:/srv/cod4/config:ro
     network_mode: bridge
     ports:
       - 28960:28960/udp
