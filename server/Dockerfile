@@ -26,4 +26,4 @@ RUN chown -R cod4 . && \
 USER cod4
 
 ENTRYPOINT [ "/srv/cod4/entrypoint.sh" ]
-CMD +set net_port "28960"+set sv_punkbuster "0"+set sv_pure "0"+exec "../config/server.cfg"+map_rotate
+CMD +set net_port "28960"+set sv_punkbuster "0"+set sv_pure "0"+exec "/srv/cod4/config/server.cfg"+map_rotate
