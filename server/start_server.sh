@@ -6,8 +6,7 @@ printf " #########################################\n\n"
 
 printf "used arguments: $@\n\n"
 
-cd /cod4
-./cod4_lnxded "$@"
+/srv/cod4/cod4_lnxded "$@"
 
 status=$?
 
