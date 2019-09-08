@@ -3,3 +3,4 @@ zone/
 config/
 mods/
 usermaps/
+docker-compose.yml
