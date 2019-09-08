@@ -2,7 +2,8 @@
 
 cd /srv/cod4
 
-printf "fixing permissons..."
+printf "fixing permissons...\n"
+
 chown -R cod4 .
 chmod 700 .
 chmod -R 400 ./*
@@ -15,6 +16,7 @@ printf " #########################################\n\n"
 
 printf "used arguments: $@\n\n"
 
+su cod4
 /srv/cod4/cod4_lnxded "$@"
 
 status=$?
